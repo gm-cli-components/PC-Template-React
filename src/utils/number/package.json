@@ -1,0 +1,26 @@
+{
+  "name": "@utils/number",
+  "version": "0.0.6",
+  "description": "数字、数量、金额工具",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://git.elitescloud.com/ELFE/el-utils.git"
+  },
+  "author": "Elitesland R&D Arch Group",
+  "license": "UNLICENSED",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "typings": "dist/types/index.d.ts",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "test": "jest",
+    "test:prod": "npm run test -- --coverage --no-cache",
+    "build": "rollup -c",
+    "start": "rollup -c -w"
+  },
+  "gitHead": "8c06e883395ae92aacda9cdaff0b5f39d4c47473"
+}

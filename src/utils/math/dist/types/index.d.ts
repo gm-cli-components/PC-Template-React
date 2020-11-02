@@ -1,0 +1,10 @@
+import { add } from './lib/add';
+import { div } from './lib/div';
+import { mul } from './lib/mul';
+import { sub } from './lib/sub';
+import { average } from './lib/average';
+import { round } from './lib/round';
+import { randomIntArrayInRange } from './lib/randomIntArrayInRange';
+import { randomIntegerInRange } from './lib/randomIntegerInRange';
+import { randomNumberInRange } from './lib/randomNumberInRange';
+export { add, sub, mul, div, average, round, randomNumberInRange, randomIntegerInRange, randomIntArrayInRange };

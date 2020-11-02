@@ -1,0 +1,124 @@
+@dark-half: #494949;
+@purple: #d897eb;
+@shadow-1: 4px 4px 20px 0 rgba(0, 0, 0, 0.01);
+@shadow-2: 4px 4px 40px 0 rgba(0, 0, 0, 0.05);
+@transition-ease-in: all 0.3s ease-out;
+@transition-ease-out: all 0.3s ease-out;
+@ease-in: ease-in;
+
+//@font-size-normal: 14px;
+
+.text-overflow {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.blur {
+  color: transparent;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.generateScales(@index, @value) {
+  // -------- width --------
+  .w-@{index} {
+    width: @value;
+  }
+
+  .w-@{index}-min {
+    min-width: @value;
+  }
+
+  .w-@{index}-max {
+    max-width: @value;
+  }
+
+  // -------- height --------
+
+  .h-@{index} {
+    height: @value;
+  }
+
+  .h-@{index}-min {
+    min-height: @value;
+  }
+
+  .h-@{index}-max {
+    max-height: @value;
+  }
+
+  // -------- margin --------
+
+  .m-t-@{index} {
+    margin-top: @value !important;
+  }
+
+  .m-r-@{index} {
+    margin-right: @value !important;
+  }
+
+  .m-b-@{index} {
+    margin-bottom: @value !important;
+  }
+
+  .m-l-@{index} {
+    margin-left: @value !important;
+  }
+
+  .m-x-@{index} {
+    margin-left: @value !important;
+    margin-right: @value !important;
+  }
+
+  .m-y-@{index} {
+    margin-top: @value !important;
+    margin-bottom: @value !important;
+  }
+
+  .m-a-@{index} {
+    margin: @value !important;
+  }
+
+  // -------- padding --------
+
+  .p-t-@{index} {
+    padding-top: @value !important;
+  }
+
+  .p-r-@{index} {
+    padding-right: @value !important;
+  }
+
+  .p-b-@{index} {
+    padding-bottom: @value !important;
+  }
+
+  .p-l-@{index} {
+    padding-left: @value !important;
+  }
+
+  .p-x-@{index} {
+    padding-left: @value !important;
+    padding-right: @value !important;
+  }
+
+  .p-y-@{index} {
+    padding-top: @value !important;
+    padding-bottom: @value !important;
+  }
+
+  .p-a-@{index} {
+    padding: @value !important;
+  }
+}
+
+// Basic looping in LESS
+@min-stride: 5px;
+.loop-scale(@index) when (@index >= 0) {
+  .generateScales(@index, @index * @min-stride);
+  // -------- next iteration --------
+  .loop-scale(@index - 1);
+}
+
+.loop-scale(20);
+.generateScales('auto', 'auto');

@@ -1,0 +1,265 @@
+@import (reference) './vars.less';
+::-webkit-scrollbar-thumb {
+	background-color: #bfbfbf;
+	border-radius: 30px;
+	outline: 2px solid slategrey;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+	background-color: #f5f5f5;
+}
+
+// ANTD UI调整样式
+// ------------------------------------------------
+:global {
+	.ant-layout-content {
+		.ant-select-focused .ant-select-selection,
+		.ant-select-selection:focus,
+		.ant-select-selection:active,
+		.ant-input:focus,
+		.ant-input:hover {
+			border-color: #ff800e;
+			box-shadow: 0 0 0 2px #ff980026;
+		}
+
+		.ant-select-selection:hover,
+		.ant-select-focused .ant-select-selection,
+		.ant-select-selection:focus,
+		.ant-select-selection:active {
+			border-color: #ff800e;
+		}
+		.ant-btn-primary,
+		.ant-btn-primary:hover,
+		.ant-btn-primary:focus {
+			color: #fff;
+			background-color: #ff800e;
+			border-color: #ff800e;
+		}
+	}
+}
+
+// ---------------- 样式工具 ----------------
+// atomic settings - TODO: 暂时写死，以后可使用less函数生成。
+// ------------------------------------------------
+:global {
+	.hidden {
+		display: none;
+	}
+
+	.sr-only {
+		white-space: nowrap;
+		-webkit-clip-path: inset(50%);
+		clip-path: inset(50%);
+	}
+
+	.sr-only-focusable:active,
+	.sr-only-focusable:focus {
+		white-space: normal;
+		-webkit-clip-path: none;
+		clip-path: none;
+	}
+
+	.blk-inline {
+		display: inline-block;
+	}
+
+	.blk-flt-left {
+		float: left;
+	}
+
+	.blk-flt-right {
+		float: right;
+	}
+
+	.border-t-0 {
+		border-top-width: 0 !important;
+	}
+
+	.border-r-0 {
+		border-right-width: 0 !important;
+	}
+
+	.border-b-0 {
+		border-bottom-width: 0 !important;
+	}
+
+	.border-l-0 {
+		border-left-width: 0 !important;
+	}
+
+	.border-x-0 {
+		border-left-width: 0 !important;
+		border-right-width: 0 !important;
+	}
+
+	.border-y-0 {
+		border-top-width: 0 !important;
+		border-bottom-width: 0 !important;
+	}
+
+	.border-a-0 {
+		border-width: 0 !important;
+	}
+
+	.text-left {
+		text-align: left !important;
+	}
+
+	.text-center {
+		text-align: center !important;
+	}
+
+	.text-right {
+		text-align: right !important;
+	}
+
+	.text-nowrap {
+		white-space: nowrap;
+	}
+
+	.text-ellipsis {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.text-disable {
+		color: fade(#000, 25%);
+	}
+
+	.x-fill-100 {
+		width: 100% !important;
+	}
+
+	.x-fill-50 {
+		width: 50% !important;
+	}
+
+	.x-fill-25 {
+		width: 25% !important;
+	}
+
+	.x-fill-75 {
+		width: 75% !important;
+	}
+
+	.x-fill-33 {
+		width: 33% !important;
+	}
+
+	.x-fill-66 {
+		width: 66% !important;
+	}
+
+	.y-fill-100 {
+		height: 100% !important;
+	}
+
+	// mixins --------
+	.generateScales(@index, @value) {
+		// -------- width --------
+
+		.w-@{index} {
+			width: @value;
+		}
+
+		.w-@{index}-min {
+			min-width: @value;
+		}
+
+		.w-@{index}-max {
+			max-width: @value;
+		}
+
+		// -------- height --------
+
+		.h-@{index} {
+			height: @value;
+		}
+
+		.h-@{index}-min {
+			min-height: @value;
+		}
+
+		.h-@{index}-max {
+			max-height: @value;
+		}
+
+		// -------- margin --------
+
+		.m-t-@{index} {
+			margin-top: @value !important;
+		}
+
+		.m-r-@{index} {
+			margin-right: @value !important;
+		}
+
+		.m-b-@{index} {
+			margin-bottom: @value !important;
+		}
+
+		.m-l-@{index} {
+			margin-left: @value !important;
+		}
+
+		.m-x-@{index} {
+			margin-left: @value !important;
+			margin-right: @value !important;
+		}
+
+		.m-y-@{index} {
+			margin-top: @value !important;
+			margin-bottom: @value !important;
+		}
+
+		.m-a-@{index} {
+			margin: @value !important;
+		}
+
+		// -------- padding --------
+
+		.p-t-@{index} {
+			padding-top: @value !important;
+		}
+
+		.p-r-@{index} {
+			padding-right: @value !important;
+		}
+
+		.p-b-@{index} {
+			padding-bottom: @value !important;
+		}
+
+		.p-l-@{index} {
+			padding-left: @value !important;
+		}
+
+		.p-x-@{index} {
+			padding-left: @value !important;
+			padding-right: @value !important;
+		}
+
+		.p-y-@{index} {
+			padding-top: @value !important;
+			padding-bottom: @value !important;
+		}
+
+		.p-a-@{index} {
+			padding: @value !important;
+		}
+	}
+
+	// Basic looping in LESS
+	@min-stride: 4px;
+	.loop-scale(@index) when(@index >= 0) {
+		.generateScales(@index, @index * @min-stride);
+		// -------- next iteration --------
+		.loop-scale(@index - 1);
+	}
+
+	.loop-scale(20);
+	.generateScales('auto', 'auto');
+}

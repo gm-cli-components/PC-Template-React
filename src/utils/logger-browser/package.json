@@ -1,0 +1,66 @@
+{
+  "name": "@utils/logger-browser",
+  "version": "0.0.5-alpha.2",
+  "description": "浏览器日志工具",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://git.elitescloud.com/ELFE/el-utils.git"
+  },
+  "author": "Elitesland R&D Arch Group",
+  "license": "UNLICENSED",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "typings": "dist/types/index.d.ts",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "prepare": "npm run build",
+    "test": "jest",
+    "test:prod": "npm run test -- --coverage --no-cache",
+    "build": "rollup -c",
+    "start": "rollup -c -w"
+  },
+  "devDependencies": {
+    "jest": "*",
+    "lodash.camelcase": "^4.3.0",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.66.2",
+    "rollup-plugin-commonjs": "^9.0.0",
+    "rollup-plugin-json": "^3.0.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-typescript2": "^0.13.0",
+    "ts-jest": "^23.1.4",
+    "typescript": "^3.0.1"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {},
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "coverageDirectory": "../../docs/test-coverage/logger-browser",
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 95,
+        "lines": 95,
+        "statements": 95
+      }
+    },
+    "collectCoverage": true
+  },
+  "gitHead": "691c3016bf00b3dca4d5f0b5c53061254f8d3070"
+}

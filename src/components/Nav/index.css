@@ -1,0 +1,70 @@
+.nav {
+  position: fixed;
+  width: 100%;
+  min-width: 1200px;
+  height: 50px;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.05);
+  z-index: 999;
+}
+.nav_inner {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  line-height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav_logo {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.left {
+  line-height: 50px;
+}
+.title {
+  font-size: 13px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #ff800e;
+}
+.list_item {
+  margin-left: 50px;
+  font-size: 12px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.65);
+}
+.active {
+  color: #ff800e;
+}
+.login_item,
+.register_item {
+  width: 76px;
+  height: 32px;
+  display: inline-block;
+  text-align: center;
+  line-height: 32px;
+}
+.login_item:hover {
+  color: #fff;
+}
+.register_item:hover {
+  color: #ff800e;
+}
+.login_item {
+  color: #fff;
+  background: #ff800e;
+  border-radius: 18px;
+}
+.register_item {
+  color: #ff800e;
+  background: rgba(255, 128, 14, 0);
+  border-radius: 18px;
+  border: 1px solid #ff800e;
+  margin-left: 10px;
+}

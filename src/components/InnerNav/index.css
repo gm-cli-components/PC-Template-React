@@ -1,0 +1,13 @@
+.top {
+  width: 100%;
+  min-width: 1136px;
+  height: 54px;
+  background: #ffffff;
+  z-index: 999;
+}
+.top_inner {
+  width: 1136px;
+  height: 100%;
+  margin: 0 auto;
+  line-height: 54px;
+}

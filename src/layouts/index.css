@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.navBox {
+  position: fixed;
+  top: 0;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  height: 100%;
+}
+.main {
+  background: #f3f4f5;
+  width: 100%;
+  padding: 20px;
+}
+.main :global .content-inner {
+  text-align: center;
+  height: 100%;
+  padding: 20px;
+  overflow-y: auto;
+  background: #fff;
+  max-height: calc(100vh - 180px);
+}
+.innerContainer {
+  margin: 0 auto;
+}
