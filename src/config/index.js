@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-04-26 14:53:20
- * @LastEditTime: 2020-08-08 10:38:56
+ * @LastEditTime: 2020-11-05 14:45:51
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /gy-b2bv2-web/src/config/index.js
@@ -24,10 +24,10 @@ console.log('baseURL', baseURL);
 
 export default {
   name: 'campus',
-  zhName: '完美校园',
+  zhName: 'PC模板',
   urlPrefix, // 静态资源前缀
-  footerText: `Copyright©2020完美数联(杭州)有限公司（Perfect Digital (Hangzhou)Technology Co.,Ltd.）| 浙ICP备20007824号-1`,
-  logo: urlPrefix + 'assets/img/common/logo_new.png',
+  footerText: `Copyright©2PC模板（Perfect Digital (Hangzhou)Technology Co.,Ltd.）| 浙ICP备xxxxxx`,
+  logo: urlPrefix + 'assets/img/common/gm.jpg',
   //logo: urlPrefix + 'assets/temp/yunshitonglogo.png',
   favicon: require('@/assets/img/favicon.ico'),
   baseURL, // 后端接口前缀

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-08-03 16:53:23
- * @LastEditTime: 2020-11-02 10:57:01
+ * @LastEditTime: 2020-11-05 14:40:39
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /pc-saas-manage-platform/.umirc.js
@@ -17,9 +17,9 @@ export default {
   dynamicImport: {
     loading: '@/pages/Loading',
   },
-  base: '/publicPath/',
+  // base: '/publicPath/',
   outputPath: './dist/publicPath',
-  publicPath: '/publicPath/',
+  // publicPath: '/publicPath/',
   // mock: false,
   title: false,
   locale: false,

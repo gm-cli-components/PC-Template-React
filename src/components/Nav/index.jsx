@@ -3,15 +3,15 @@ import { Link } from 'umi';
 import classnames from 'classnames';
 import styles from './index.less';
 
-const Nav = ({ className, list = [] }) => {
+const Nav = ({ className, title, list = [] }) => {
   return (
     <div
       className={styles.nav}
     >
       <div className={styles.nav_inner}>
         <div className={styles.left}>
-          <img src={require(`@/assets/img/common/logo_icon.png`)} className={styles.nav_logo} alt="" />
-          <span className={styles.title}>完美校园</span>
+          <img src={require(`@/assets/img/common/gm.jpg`)} className={styles.nav_logo} alt="logo" />
+          <span className={styles.title}>{title || 'title'}</span>
         </div>
         <div className={styles.right}>
           {list.map((item, index) => {

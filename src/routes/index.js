@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-08-03 18:11:59
- * @LastEditTime: 2020-11-02 10:26:23
+ * @LastEditTime: 2020-11-05 14:41:45
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /pc-saas-manage-platform/src/routes.js
@@ -25,6 +25,6 @@ export default [
         component: '../pages/app/loading'
       }
     ],
-    wrappers: ['../pages/app/wrappers/auth']
+    // wrappers: ['../pages/app/wrappers/auth']
   }
 ];
