@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-08-03 16:53:23
- * @LastEditTime: 2020-12-23 15:06:06
+ * @LastEditTime: 2020-12-23 15:05:52
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /pc-saas-manage-platform/.umirc.js
@@ -17,21 +17,26 @@ export default {
   dynamicImport: {
     loading: '@/pages/Loading',
   },
-  // base: '/publicPath/',
-  outputPath: './dist/publicPath',
-  // publicPath: '/publicPath/',
-  // mock: false,
+  alias: {
+    '@': require('path').resolve(__dirname, 'src'),
+    '@ant-design/icons/lib/dist': require('path').resolve(__dirname, 'src/utils/lib/antdIcons.js')
+  },
+  // 正式环境
+  base: '/',
+  publicPath: 'publicPath',
+  outputPath: './dist/prod/saasManage',
+  mock: false,
   title: false,
   locale: false,
   hash: true,
   theme: {
     '@primary-color': '#ff800e',
   },
-  // proxy: {
-  //   "/path": {
-  //     // "target": "",
-  //     "changeOrigin": true,
-  //     "pathRewrite": { "^/path": "" }
-  //   }
-  // }
+  proxy: {
+    "/path": {
+      "target": "ip", // 正式环境
+      "changeOrigin": true,
+      "pathRewrite": { "^/path": "" }
+    }
+  }
 };

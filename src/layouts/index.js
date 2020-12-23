@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-08-03 16:53:23
- * @LastEditTime: 2020-11-02 10:42:30
+ * @LastEditTime: 2020-12-23 15:06:59
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /pc-saas-manage-platform/src/layouts/index.js
@@ -32,8 +32,6 @@ const App = ({ children, dispatch, app, loading, location, dashboard, login, ...
   const t = Object.values(menuCfg).filter(menu => location.pathname.indexOf(menu.url) > -1);
   const title = t.length ? `${t[0].name} · ${zhName}` : `${zhName}`;
   // const changeBackColor = location.pathname.match('/setting') || location.pathname.match('/mailList');
-
-  const userInfo = JSON.parse(sessionStorage.getItem('userInfo') || '{}');
 
   const [new_workNav, setNew_workNav] = useState(workNav);
 

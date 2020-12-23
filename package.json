@@ -1,8 +1,12 @@
 {
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "umi dev",
     "build": "umi build",
+    "aBuild": "ANALYZE=1 umi build",
+    "buildProd": "UMI_ENV=prod umi build",
+    "abuildProd": "ANALYZE=1 UMI_ENV=prod umi build",
     "test": "umi test",
     "lint": "eslint {src,mock,tests}/**/*.{js,jsx} --fix",
     "precommit": "lint-staged"

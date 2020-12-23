@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-08-05 10:01:45
- * @LastEditTime: 2020-08-11 14:49:05
+ * @LastEditTime: 2020-12-23 15:07:45
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /pc-saas-manage-platform/mock/application.js
@@ -33,10 +33,9 @@ export default {
         "id": 1,
         "userName": "张三",
         "nickName": null,
-        "phoneNum":"13333333333",
+        "phoneNum": "13333333333",
         "deptId": 1,
-        "wxId": 485,
-        "wxName": "中原农业大学",
+        "wxId": 111,
         "dataScope": null,
         "identityStatus": true,
         "roleKeyCode": "1"
